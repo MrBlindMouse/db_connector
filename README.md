@@ -36,6 +36,8 @@ schema = [
 setupDB(schema, path)
 ```
 
+Its important to keep to SQL's syntax formatting for the table_columns[key] values.
+
 ## Coming soon
 Call tableClass = generateClasses(schema, path) to create classes for interacting with created tables.
 
