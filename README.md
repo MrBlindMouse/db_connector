@@ -1,49 +1,18 @@
 ## Ponderings
-I'm thinking of this repo becoming a collection of scripts, for easy implementation of various technologies. Like websockets and the below SQL database.
+I'm thinking of this repo becoming a collection of scripts, for easy implementation of various technologies. Like websockets and SQLite.
 A main requirement would be no dependencies other than the most necessary.
 The purpose is to learn how to use these technologies, illustrate best practices and basic implementations, and to simply copy/paste into projects.
 
-# SQLite DB Creation
-This Python script creates SQLite database tables from a schema.
+I understant that AI can easily create these scripts, but I believe its better to learn and understand the code than simply relying on convenient tools. That said this is very convenient and easy to use without learning the code.
 
-## How to Use
-Copy the main Python script from this repository.
+# Content
+## SQLite
+Scripts for creating and interacting with a sqlite3 database.
 
-Add a schema and path.
+## Contribute
+If you want to contribute scripts for different languages, or feel existing scripts need improving, feel free to create PR's!
 
-Run the function:
-
-```python
-path='data/database.db'
-schema = [
-    {"table_name":"example_user_table",
-    "table_columns":{
-        "id":"INTEGER PRIMARY KEY AUTOINCREMENT",
-        "name":"TEXT NOT NULL",
-        "email":"TEXT NOT NULL",
-        "password":"TEXT NOT NULL"
-        }},
-    {"table_name":"example_product_table",
-    "table_columns":{
-        "id":"INTEGER PRIMARY KEY AUTOINCREMENT",
-        "product_id":"INTEGER NOT NULL",
-        "name":"TEXT NOT NULL",
-        "description":"TEXT DEFAULT 'An amazing new product!'",
-        "price":"FLOAT DEFAULT 0"
-        }}
-]
-
-setupDB(schema, path)
-```
-
-Its important to keep to SQL's syntax formatting for the table_columns[key] values.
-
-## Coming soon
-Call tableClass = generateClasses(schema, path) to create classes for interacting with created tables.
-
-## Notes
-Requires Python 3.6+ and SQLite 3.35.0+ for DROP COLUMN support.
-Customize the schema in setupDB() to match your database needs.
+Please ensure the contributions align with the repo's purpose of simple, dependency light scripts for learning.
 
 ## License
 MIT License

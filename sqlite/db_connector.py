@@ -2,6 +2,13 @@ import sqlite3, os, datetime, time
 
 
 def setupDB(schema:list, db_path:str="data/database.db"):
+    if not schema:
+        currentTS = int(time.time())
+        date = datetime.datetime.fromtimestamp(currentTS)
+        dateFormat = "%d%b %Y %H:%M:%S"
+        printDate = date.strftime(dateFormat)
+        print(f"{printDate}: Error ~ No schema supplied!")
+        return None
     
     db_dir = os.path.dirname(db_path)
     if db_dir and not os.path.exists(db_dir):
