@@ -1,9 +1,16 @@
-# SQLite Dynamic Table Classes
+## Ponderings
+I'm thinking of this repo becoming a collection of scripts, for easy implementation of various technologies. Like websockets and the below SQL database.
+A main requirement would be no dependencies other than the most necessary.
+The purpose is to learn how to use these technologies, illustrate best practices and basic implementations, and to simply copy/paste into projects.
+
+# SQLite DB Creation
 This Python script creates SQLite database tables from a schema.
 
 ## How to Use
 Copy the main Python script from this repository.
-Add a schema and path
+
+Add a schema and path.
+
 Run the function:
 
 ```python
@@ -30,7 +37,7 @@ setupDB(schema, path)
 ```
 
 ## Coming soon
-Call tableClass = generateClasses(schema, path) to create classes for each table.
+Call tableClass = generateClasses(schema, path) to create classes for interacting with created tables.
 
 ## Notes
 Requires Python 3.6+ and SQLite 3.35.0+ for DROP COLUMN support.
